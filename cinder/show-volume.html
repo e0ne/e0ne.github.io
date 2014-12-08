@@ -1,0 +1,209 @@
+<!doctype html>
+<html ng-app="Application">
+
+  <head>
+    <script>
+        var OSProfilerData = {"info": {"started": 0, "finished": 246, "name": "total"}, "children": [{"info": {"name": "wsgi", "service": "osapi_volume", "info.request:host_url": "http://10.0.2.15:8776", "info.request:scheme": "http", "finished": 246, "project": "cinder", "started": 0, "host": "0.0.0.0", "info.request:method": "GET", "info.request:query": "", "info.request:path": "/v2/c9b2a796a9184758a06b9d399fac1ec6/volumes/ef500de4-b00c-4c70-9337-7758e005f00e"}, "parent_id": "927cc141-f0fa-4189-aafb-076599aa5101", "trace_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "children": [{"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 88, "project": "cinder", "started": 79, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "a2cacbdd-fa45-463b-9a1b-2d0cbd65b8fd", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT anon_1.volumes_created_at AS anon_1_volumes_created_at, anon_1.volumes_updated_at AS anon_1_volumes_updated_at, anon_1.volumes_deleted_at AS anon_1_volumes_deleted_at, anon_1.volumes_id AS anon_1_volumes_id, anon_1.volumes__name_id AS anon_1_volumes__name_id, anon_1.volumes_ec2_id AS anon_1_volumes_ec2_id, anon_1.volumes_user_id AS anon_1_volumes_user_id, anon_1.volumes_project_id AS anon_1_volumes_project_id, anon_1.volumes_snapshot_id AS anon_1_volumes_snapshot_id, anon_1.volumes_host AS anon_1_volumes_host, anon_1.volumes_size AS anon_1_volumes_size, anon_1.volumes_availability_zone AS anon_1_volumes_availability_zone, anon_1.volumes_instance_uuid AS anon_1_volumes_instance_uuid, anon_1.volumes_attached_host AS anon_1_volumes_attached_host, anon_1.volumes_mountpoint AS anon_1_volumes_mountpoint, anon_1.volumes_attach_time AS anon_1_volumes_attach_time, anon_1.volumes_status AS anon_1_volumes_status, anon_1.volumes_attach_status AS anon_1_volumes_attach_status, anon_1.volumes_migration_status AS anon_1_volumes_migration_status, anon_1.volumes_scheduled_at AS anon_1_volumes_scheduled_at, anon_1.volumes_launched_at AS anon_1_volumes_launched_at, anon_1.volumes_terminated_at AS anon_1_volumes_terminated_at, anon_1.volumes_display_name AS anon_1_volumes_display_name, anon_1.volumes_display_description AS anon_1_volumes_display_description, anon_1.volumes_provider_location AS anon_1_volumes_provider_location, anon_1.volumes_provider_auth AS anon_1_volumes_provider_auth, anon_1.volumes_provider_geometry AS anon_1_volumes_provider_geometry, anon_1.volumes_volume_type_id AS anon_1_volumes_volume_type_id, anon_1.volumes_source_volid AS anon_1_volumes_source_volid, anon_1.volumes_encryption_key_id AS anon_1_volumes_encryption_key_id, anon_1.volumes_consistencygroup_id AS anon_1_volumes_consistencygroup_id, anon_1.volumes_deleted AS anon_1_volumes_deleted, anon_1.volumes_bootable AS anon_1_volumes_bootable, anon_1.volumes_replication_status AS anon_1_volumes_replication_status, anon_1.volumes_replication_extended_status AS anon_1_volumes_replication_extended_status, anon_1.volumes_replication_driver_data AS anon_1_volumes_replication_driver_data, consistencygroups_1.created_at AS consistencygroups_1_created_at, consistencygroups_1.updated_at AS consistencygroups_1_updated_at, consistencygroups_1.deleted_at AS consistencygroups_1_deleted_at, consistencygroups_1.deleted AS consistencygroups_1_deleted, consistencygroups_1.id AS consistencygroups_1_id, consistencygroups_1.user_id AS consistencygroups_1_user_id, consistencygroups_1.project_id AS consistencygroups_1_project_id, consistencygroups_1.host AS consistencygroups_1_host, consistencygroups_1.availability_zone AS consistencygroups_1_availability_zone, consistencygroups_1.name AS consistencygroups_1_name, consistencygroups_1.description AS consistencygroups_1_description, consistencygroups_1.volume_type_id AS consistencygroups_1_volume_type_id, consistencygroups_1.status AS consistencygroups_1_status, volume_admin_metadata_1.created_at AS volume_admin_metadata_1_created_at, volume_admin_metadata_1.updated_at AS volume_admin_metadata_1_updated_at, volume_admin_metadata_1.deleted_at AS volume_admin_metadata_1_deleted_at, volume_admin_metadata_1.deleted AS volume_admin_metadata_1_deleted, volume_admin_metadata_1.id AS volume_admin_metadata_1_id, volume_admin_metadata_1.`key` AS volume_admin_metadata_1_key, volume_admin_metadata_1.value AS volume_admin_metadata_1_value, volume_admin_metadata_1.volume_id AS volume_admin_metadata_1_volume_id, volume_metadata_1.created_at AS volume_metadata_1_created_at, volume_metadata_1.updated_at AS volume_metadata_1_updated_at, volume_metadata_1.deleted_at AS volume_metadata_1_deleted_at, volume_metadata_1.deleted AS volume_metadata_1_deleted, volume_metadata_1.id AS volume_metadata_1_id, volume_metadata_1.`key` AS volume_metadata_1_key, volume_metadata_1.value AS volume_metadata_1_value, volume_metadata_1.volume_id AS volume_metadata_1_volume_id, volume_types_1.created_at AS volume_types_1_created_at, volume_types_1.updated_at AS volume_types_1_updated_at, volume_types_1.deleted_at AS volume_types_1_deleted_at, volume_types_1.deleted AS volume_types_1_deleted, volume_types_1.id AS volume_types_1_id, volume_types_1.name AS volume_types_1_name, volume_types_1.qos_specs_id AS volume_types_1_qos_specs_id, volume_types_1.is_public AS volume_types_1_is_public \nFROM (SELECT volumes.created_at AS volumes_created_at, volumes.updated_at AS volumes_updated_at, volumes.deleted_at AS volumes_deleted_at, volumes.id AS volumes_id, volumes._name_id AS volumes__name_id, volumes.ec2_id AS volumes_ec2_id, volumes.user_id AS volumes_user_id, volumes.project_id AS volumes_project_id, volumes.snapshot_id AS volumes_snapshot_id, volumes.host AS volumes_host, volumes.size AS volumes_size, volumes.availability_zone AS volumes_availability_zone, volumes.instance_uuid AS volumes_instance_uuid, volumes.attached_host AS volumes_attached_host, volumes.mountpoint AS volumes_mountpoint, volumes.attach_time AS volumes_attach_time, volumes.status AS volumes_status, volumes.attach_status AS volumes_attach_status, volumes.migration_status AS volumes_migration_status, volumes.scheduled_at AS volumes_scheduled_at, volumes.launched_at AS volumes_launched_at, volumes.terminated_at AS volumes_terminated_at, volumes.display_name AS volumes_display_name, volumes.display_description AS volumes_display_description, volumes.provider_location AS volumes_provider_location, volumes.provider_auth AS volumes_provider_auth, volumes.provider_geometry AS volumes_provider_geometry, volumes.volume_type_id AS volumes_volume_type_id, volumes.source_volid AS volumes_source_volid, volumes.encryption_key_id AS volumes_encryption_key_id, volumes.consistencygroup_id AS volumes_consistencygroup_id, volumes.deleted AS volumes_deleted, volumes.bootable AS volumes_bootable, volumes.replication_status AS volumes_replication_status, volumes.replication_extended_status AS volumes_replication_extended_status, volumes.replication_driver_data AS volumes_replication_driver_data \nFROM volumes \nWHERE volumes.deleted = false AND volumes.id = %s \n LIMIT %s) AS anon_1 LEFT OUTER JOIN consistencygroups AS consistencygroups_1 ON anon_1.volumes_consistencygroup_id = consistencygroups_1.id LEFT OUTER JOIN volume_admin_metadata AS volume_admin_metadata_1 ON volume_admin_metadata_1.volume_id = anon_1.volumes_id AND volume_admin_metadata_1.deleted = false LEFT OUTER JOIN volume_metadata AS volume_metadata_1 ON volume_metadata_1.volume_id = anon_1.volumes_id AND volume_metadata_1.deleted = false LEFT OUTER JOIN volume_types AS volume_types_1 ON anon_1.volumes_volume_type_id = volume_types_1.id AND volume_types_1.deleted = false", "finished": 100, "project": "cinder", "started": 95, "host": "0.0.0.0", "info.db:params": "['ef500de4-b00c-4c70-9337-7758e005f00e', 1]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "372dcd4e-3527-45b0-99f6-543189b9a170", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 143, "project": "cinder", "started": 139, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "9f591634-87ff-4302-98a4-038a0c6cff81", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT anon_1.volumes_created_at AS anon_1_volumes_created_at, anon_1.volumes_updated_at AS anon_1_volumes_updated_at, anon_1.volumes_deleted_at AS anon_1_volumes_deleted_at, anon_1.volumes_id AS anon_1_volumes_id, anon_1.volumes__name_id AS anon_1_volumes__name_id, anon_1.volumes_ec2_id AS anon_1_volumes_ec2_id, anon_1.volumes_user_id AS anon_1_volumes_user_id, anon_1.volumes_project_id AS anon_1_volumes_project_id, anon_1.volumes_snapshot_id AS anon_1_volumes_snapshot_id, anon_1.volumes_host AS anon_1_volumes_host, anon_1.volumes_size AS anon_1_volumes_size, anon_1.volumes_availability_zone AS anon_1_volumes_availability_zone, anon_1.volumes_instance_uuid AS anon_1_volumes_instance_uuid, anon_1.volumes_attached_host AS anon_1_volumes_attached_host, anon_1.volumes_mountpoint AS anon_1_volumes_mountpoint, anon_1.volumes_attach_time AS anon_1_volumes_attach_time, anon_1.volumes_status AS anon_1_volumes_status, anon_1.volumes_attach_status AS anon_1_volumes_attach_status, anon_1.volumes_migration_status AS anon_1_volumes_migration_status, anon_1.volumes_scheduled_at AS anon_1_volumes_scheduled_at, anon_1.volumes_launched_at AS anon_1_volumes_launched_at, anon_1.volumes_terminated_at AS anon_1_volumes_terminated_at, anon_1.volumes_display_name AS anon_1_volumes_display_name, anon_1.volumes_display_description AS anon_1_volumes_display_description, anon_1.volumes_provider_location AS anon_1_volumes_provider_location, anon_1.volumes_provider_auth AS anon_1_volumes_provider_auth, anon_1.volumes_provider_geometry AS anon_1_volumes_provider_geometry, anon_1.volumes_volume_type_id AS anon_1_volumes_volume_type_id, anon_1.volumes_source_volid AS anon_1_volumes_source_volid, anon_1.volumes_encryption_key_id AS anon_1_volumes_encryption_key_id, anon_1.volumes_consistencygroup_id AS anon_1_volumes_consistencygroup_id, anon_1.volumes_deleted AS anon_1_volumes_deleted, anon_1.volumes_bootable AS anon_1_volumes_bootable, anon_1.volumes_replication_status AS anon_1_volumes_replication_status, anon_1.volumes_replication_extended_status AS anon_1_volumes_replication_extended_status, anon_1.volumes_replication_driver_data AS anon_1_volumes_replication_driver_data, consistencygroups_1.created_at AS consistencygroups_1_created_at, consistencygroups_1.updated_at AS consistencygroups_1_updated_at, consistencygroups_1.deleted_at AS consistencygroups_1_deleted_at, consistencygroups_1.deleted AS consistencygroups_1_deleted, consistencygroups_1.id AS consistencygroups_1_id, consistencygroups_1.user_id AS consistencygroups_1_user_id, consistencygroups_1.project_id AS consistencygroups_1_project_id, consistencygroups_1.host AS consistencygroups_1_host, consistencygroups_1.availability_zone AS consistencygroups_1_availability_zone, consistencygroups_1.name AS consistencygroups_1_name, consistencygroups_1.description AS consistencygroups_1_description, consistencygroups_1.volume_type_id AS consistencygroups_1_volume_type_id, consistencygroups_1.status AS consistencygroups_1_status, volume_admin_metadata_1.created_at AS volume_admin_metadata_1_created_at, volume_admin_metadata_1.updated_at AS volume_admin_metadata_1_updated_at, volume_admin_metadata_1.deleted_at AS volume_admin_metadata_1_deleted_at, volume_admin_metadata_1.deleted AS volume_admin_metadata_1_deleted, volume_admin_metadata_1.id AS volume_admin_metadata_1_id, volume_admin_metadata_1.`key` AS volume_admin_metadata_1_key, volume_admin_metadata_1.value AS volume_admin_metadata_1_value, volume_admin_metadata_1.volume_id AS volume_admin_metadata_1_volume_id, volume_metadata_1.created_at AS volume_metadata_1_created_at, volume_metadata_1.updated_at AS volume_metadata_1_updated_at, volume_metadata_1.deleted_at AS volume_metadata_1_deleted_at, volume_metadata_1.deleted AS volume_metadata_1_deleted, volume_metadata_1.id AS volume_metadata_1_id, volume_metadata_1.`key` AS volume_metadata_1_key, volume_metadata_1.value AS volume_metadata_1_value, volume_metadata_1.volume_id AS volume_metadata_1_volume_id, volume_types_1.created_at AS volume_types_1_created_at, volume_types_1.updated_at AS volume_types_1_updated_at, volume_types_1.deleted_at AS volume_types_1_deleted_at, volume_types_1.deleted AS volume_types_1_deleted, volume_types_1.id AS volume_types_1_id, volume_types_1.name AS volume_types_1_name, volume_types_1.qos_specs_id AS volume_types_1_qos_specs_id, volume_types_1.is_public AS volume_types_1_is_public \nFROM (SELECT volumes.created_at AS volumes_created_at, volumes.updated_at AS volumes_updated_at, volumes.deleted_at AS volumes_deleted_at, volumes.id AS volumes_id, volumes._name_id AS volumes__name_id, volumes.ec2_id AS volumes_ec2_id, volumes.user_id AS volumes_user_id, volumes.project_id AS volumes_project_id, volumes.snapshot_id AS volumes_snapshot_id, volumes.host AS volumes_host, volumes.size AS volumes_size, volumes.availability_zone AS volumes_availability_zone, volumes.instance_uuid AS volumes_instance_uuid, volumes.attached_host AS volumes_attached_host, volumes.mountpoint AS volumes_mountpoint, volumes.attach_time AS volumes_attach_time, volumes.status AS volumes_status, volumes.attach_status AS volumes_attach_status, volumes.migration_status AS volumes_migration_status, volumes.scheduled_at AS volumes_scheduled_at, volumes.launched_at AS volumes_launched_at, volumes.terminated_at AS volumes_terminated_at, volumes.display_name AS volumes_display_name, volumes.display_description AS volumes_display_description, volumes.provider_location AS volumes_provider_location, volumes.provider_auth AS volumes_provider_auth, volumes.provider_geometry AS volumes_provider_geometry, volumes.volume_type_id AS volumes_volume_type_id, volumes.source_volid AS volumes_source_volid, volumes.encryption_key_id AS volumes_encryption_key_id, volumes.consistencygroup_id AS volumes_consistencygroup_id, volumes.deleted AS volumes_deleted, volumes.bootable AS volumes_bootable, volumes.replication_status AS volumes_replication_status, volumes.replication_extended_status AS volumes_replication_extended_status, volumes.replication_driver_data AS volumes_replication_driver_data \nFROM volumes \nWHERE volumes.deleted = false AND volumes.id = %s \n LIMIT %s) AS anon_1 LEFT OUTER JOIN consistencygroups AS consistencygroups_1 ON anon_1.volumes_consistencygroup_id = consistencygroups_1.id LEFT OUTER JOIN volume_admin_metadata AS volume_admin_metadata_1 ON volume_admin_metadata_1.volume_id = anon_1.volumes_id AND volume_admin_metadata_1.deleted = false LEFT OUTER JOIN volume_metadata AS volume_metadata_1 ON volume_metadata_1.volume_id = anon_1.volumes_id AND volume_metadata_1.deleted = false LEFT OUTER JOIN volume_types AS volume_types_1 ON anon_1.volumes_volume_type_id = volume_types_1.id AND volume_types_1.deleted = false", "finished": 155, "project": "cinder", "started": 151, "host": "0.0.0.0", "info.db:params": "['ef500de4-b00c-4c70-9337-7758e005f00e', 1]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "def389d5-0a5a-4ce7-be71-91ae17da2195", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 194, "project": "cinder", "started": 191, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "86c53fda-e021-45c8-a7fe-e5d99ca2fb27", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT anon_1.volumes_created_at AS anon_1_volumes_created_at, anon_1.volumes_updated_at AS anon_1_volumes_updated_at, anon_1.volumes_deleted_at AS anon_1_volumes_deleted_at, anon_1.volumes_id AS anon_1_volumes_id, anon_1.volumes__name_id AS anon_1_volumes__name_id, anon_1.volumes_ec2_id AS anon_1_volumes_ec2_id, anon_1.volumes_user_id AS anon_1_volumes_user_id, anon_1.volumes_project_id AS anon_1_volumes_project_id, anon_1.volumes_snapshot_id AS anon_1_volumes_snapshot_id, anon_1.volumes_host AS anon_1_volumes_host, anon_1.volumes_size AS anon_1_volumes_size, anon_1.volumes_availability_zone AS anon_1_volumes_availability_zone, anon_1.volumes_instance_uuid AS anon_1_volumes_instance_uuid, anon_1.volumes_attached_host AS anon_1_volumes_attached_host, anon_1.volumes_mountpoint AS anon_1_volumes_mountpoint, anon_1.volumes_attach_time AS anon_1_volumes_attach_time, anon_1.volumes_status AS anon_1_volumes_status, anon_1.volumes_attach_status AS anon_1_volumes_attach_status, anon_1.volumes_migration_status AS anon_1_volumes_migration_status, anon_1.volumes_scheduled_at AS anon_1_volumes_scheduled_at, anon_1.volumes_launched_at AS anon_1_volumes_launched_at, anon_1.volumes_terminated_at AS anon_1_volumes_terminated_at, anon_1.volumes_display_name AS anon_1_volumes_display_name, anon_1.volumes_display_description AS anon_1_volumes_display_description, anon_1.volumes_provider_location AS anon_1_volumes_provider_location, anon_1.volumes_provider_auth AS anon_1_volumes_provider_auth, anon_1.volumes_provider_geometry AS anon_1_volumes_provider_geometry, anon_1.volumes_volume_type_id AS anon_1_volumes_volume_type_id, anon_1.volumes_source_volid AS anon_1_volumes_source_volid, anon_1.volumes_encryption_key_id AS anon_1_volumes_encryption_key_id, anon_1.volumes_consistencygroup_id AS anon_1_volumes_consistencygroup_id, anon_1.volumes_deleted AS anon_1_volumes_deleted, anon_1.volumes_bootable AS anon_1_volumes_bootable, anon_1.volumes_replication_status AS anon_1_volumes_replication_status, anon_1.volumes_replication_extended_status AS anon_1_volumes_replication_extended_status, anon_1.volumes_replication_driver_data AS anon_1_volumes_replication_driver_data, consistencygroups_1.created_at AS consistencygroups_1_created_at, consistencygroups_1.updated_at AS consistencygroups_1_updated_at, consistencygroups_1.deleted_at AS consistencygroups_1_deleted_at, consistencygroups_1.deleted AS consistencygroups_1_deleted, consistencygroups_1.id AS consistencygroups_1_id, consistencygroups_1.user_id AS consistencygroups_1_user_id, consistencygroups_1.project_id AS consistencygroups_1_project_id, consistencygroups_1.host AS consistencygroups_1_host, consistencygroups_1.availability_zone AS consistencygroups_1_availability_zone, consistencygroups_1.name AS consistencygroups_1_name, consistencygroups_1.description AS consistencygroups_1_description, consistencygroups_1.volume_type_id AS consistencygroups_1_volume_type_id, consistencygroups_1.status AS consistencygroups_1_status, volume_admin_metadata_1.created_at AS volume_admin_metadata_1_created_at, volume_admin_metadata_1.updated_at AS volume_admin_metadata_1_updated_at, volume_admin_metadata_1.deleted_at AS volume_admin_metadata_1_deleted_at, volume_admin_metadata_1.deleted AS volume_admin_metadata_1_deleted, volume_admin_metadata_1.id AS volume_admin_metadata_1_id, volume_admin_metadata_1.`key` AS volume_admin_metadata_1_key, volume_admin_metadata_1.value AS volume_admin_metadata_1_value, volume_admin_metadata_1.volume_id AS volume_admin_metadata_1_volume_id, volume_metadata_1.created_at AS volume_metadata_1_created_at, volume_metadata_1.updated_at AS volume_metadata_1_updated_at, volume_metadata_1.deleted_at AS volume_metadata_1_deleted_at, volume_metadata_1.deleted AS volume_metadata_1_deleted, volume_metadata_1.id AS volume_metadata_1_id, volume_metadata_1.`key` AS volume_metadata_1_key, volume_metadata_1.value AS volume_metadata_1_value, volume_metadata_1.volume_id AS volume_metadata_1_volume_id, volume_types_1.created_at AS volume_types_1_created_at, volume_types_1.updated_at AS volume_types_1_updated_at, volume_types_1.deleted_at AS volume_types_1_deleted_at, volume_types_1.deleted AS volume_types_1_deleted, volume_types_1.id AS volume_types_1_id, volume_types_1.name AS volume_types_1_name, volume_types_1.qos_specs_id AS volume_types_1_qos_specs_id, volume_types_1.is_public AS volume_types_1_is_public \nFROM (SELECT volumes.created_at AS volumes_created_at, volumes.updated_at AS volumes_updated_at, volumes.deleted_at AS volumes_deleted_at, volumes.id AS volumes_id, volumes._name_id AS volumes__name_id, volumes.ec2_id AS volumes_ec2_id, volumes.user_id AS volumes_user_id, volumes.project_id AS volumes_project_id, volumes.snapshot_id AS volumes_snapshot_id, volumes.host AS volumes_host, volumes.size AS volumes_size, volumes.availability_zone AS volumes_availability_zone, volumes.instance_uuid AS volumes_instance_uuid, volumes.attached_host AS volumes_attached_host, volumes.mountpoint AS volumes_mountpoint, volumes.attach_time AS volumes_attach_time, volumes.status AS volumes_status, volumes.attach_status AS volumes_attach_status, volumes.migration_status AS volumes_migration_status, volumes.scheduled_at AS volumes_scheduled_at, volumes.launched_at AS volumes_launched_at, volumes.terminated_at AS volumes_terminated_at, volumes.display_name AS volumes_display_name, volumes.display_description AS volumes_display_description, volumes.provider_location AS volumes_provider_location, volumes.provider_auth AS volumes_provider_auth, volumes.provider_geometry AS volumes_provider_geometry, volumes.volume_type_id AS volumes_volume_type_id, volumes.source_volid AS volumes_source_volid, volumes.encryption_key_id AS volumes_encryption_key_id, volumes.consistencygroup_id AS volumes_consistencygroup_id, volumes.deleted AS volumes_deleted, volumes.bootable AS volumes_bootable, volumes.replication_status AS volumes_replication_status, volumes.replication_extended_status AS volumes_replication_extended_status, volumes.replication_driver_data AS volumes_replication_driver_data \nFROM volumes \nWHERE volumes.deleted = false AND volumes.id = %s \n LIMIT %s) AS anon_1 LEFT OUTER JOIN consistencygroups AS consistencygroups_1 ON anon_1.volumes_consistencygroup_id = consistencygroups_1.id LEFT OUTER JOIN volume_admin_metadata AS volume_admin_metadata_1 ON volume_admin_metadata_1.volume_id = anon_1.volumes_id AND volume_admin_metadata_1.deleted = false LEFT OUTER JOIN volume_metadata AS volume_metadata_1 ON volume_metadata_1.volume_id = anon_1.volumes_id AND volume_metadata_1.deleted = false LEFT OUTER JOIN volume_types AS volume_types_1 ON anon_1.volumes_volume_type_id = volume_types_1.id AND volume_types_1.deleted = false", "finished": 207, "project": "cinder", "started": 201, "host": "0.0.0.0", "info.db:params": "['ef500de4-b00c-4c70-9337-7758e005f00e', 1]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "7c59655a-8c0c-4920-98e0-0a688b7d79ef", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 233, "project": "cinder", "started": 229, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "96d53a17-fda2-4d78-b3bc-023b05800b2c", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT volume_glance_metadata.created_at AS volume_glance_metadata_created_at, volume_glance_metadata.updated_at AS volume_glance_metadata_updated_at, volume_glance_metadata.deleted_at AS volume_glance_metadata_deleted_at, volume_glance_metadata.deleted AS volume_glance_metadata_deleted, volume_glance_metadata.id AS volume_glance_metadata_id, volume_glance_metadata.volume_id AS volume_glance_metadata_volume_id, volume_glance_metadata.snapshot_id AS volume_glance_metadata_snapshot_id, volume_glance_metadata.`key` AS volume_glance_metadata_key, volume_glance_metadata.value AS volume_glance_metadata_value \nFROM volume_glance_metadata \nWHERE volume_glance_metadata.deleted = false AND volume_glance_metadata.volume_id = %s AND volume_glance_metadata.deleted = false", "finished": 241, "project": "cinder", "started": 236, "host": "0.0.0.0", "info.db:params": "['ef500de4-b00c-4c70-9337-7758e005f00e']"}, "parent_id": "e0f5c97b-619b-47a1-941e-04753c7aada9", "trace_id": "957a15c0-92ec-40d0-a58f-8dc7cdef9255", "children": []}]}]}
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+
+    <style>
+
+      .trace {
+        min-width: 900px;
+        width: 100%;
+      }
+
+      .trace tr.active-true {
+        background-color: #D9EDF7!important;
+      }
+
+      .trace tr td {
+        width: 14%;
+        white-space: nowrap;
+        padding: 2px;
+        border-right: 1px solid #eee;
+
+      }
+      .trace tr td.details {
+        width: 10%;
+        padding-right: 20px;
+      }
+      .trace.cursor_pointer_on_hover {
+        cursor: pointer;
+      }
+      .trace .level {
+        width: 10%;
+        font-weight: bold;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .duration {
+        width: 25px;
+        margin: 0px;
+        padding: 0px;
+        background-color: #c6eff3;
+        border-radius: 4px;
+        font-size: 10px;
+
+      }
+
+      .duration div{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;
+      }
+    </style>
+
+    <script type="text/ng-template"  id="tree_item_renderer.html">
+
+        <div ng-init="hide_children=false">
+          <table class="trace cursor_pointer_on_hover">
+            <tr class="active-{{hover}}" ng-init="hover=false" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
+              <td class="level" style="padding-left:{{data.level * 5}}px;">
+                <button type="button" class="btn btn-default btn-xs" ng-disabled="data.is_leaf" ng-click="hide_children=!hide_children">
+                  <span class="glyphicon glyphicon-{{ (data.is_leaf) ? 'cloud' : ((hide_children) ? 'plus': 'minus')}}"></span>
+                  {{data.level || 0}}
+                </button>
+              </td>
+              <td ng-click="display(data);" class="text-center">
+               <div class="duration" style="width: {{get_width(data)}}%; margin-left: {{get_started(data)}}%">
+                  <div>{{data.info.finished - data.info.started}} ms</div>
+                </div>
+              </td>
+              <td ng-click="display(data);" class="{{ is_important(data) ? 'bold' : ''}} text-right" > {{data.info.name}} </td>
+              <td ng-click="display(data);"> {{data.info.project  || "n/a"}}</td>
+              <td ng-click="display(data);"> {{data.info.service  || "n/a" }} </td>
+              <td ng-click="display(data);"> {{data.info.host || "n/a"}} </td>
+              <td class="details">
+                <a href="#" ng-click="display(data);"> Details </a>
+              </td>
+            </tr>
+          </table>
+
+
+        <div ng-hide="hide_children">
+          <div ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"> </div>
+        </div>
+      </div>
+
+
+    </script>
+
+    <script>
+      angular.module("Application", ['ui.bootstrap']);
+
+      function ProfilerCtlr($scope, $modal) {
+
+        var convert_input = function(input, level){
+          level = (level) ? level : 0;
+          input.level = level;
+          input.is_leaf = !input.children.length
+
+          for (var i=0; i < input.children.length; i++)
+            convert_input(input.children[i], level + 1);
+          return input;
+        }
+
+        $scope.get_width = function(data){
+
+          var full_duration = $scope.tree[0].info.finished;
+          var duration = (data.info.finished - data.info.started) * 100.0 / full_duration;
+          return (duration >= 0.5) ? duration : 0.5;
+        }
+
+        $scope.get_started = function(data) {
+          var full_duration = $scope.tree[0].info.finished;
+          return data.info.started * 100.0 / full_duration;
+        }
+
+        $scope.is_important = function(data) {
+          return ["total", "wsgi", "rpc"].indexOf(data.info.name) != -1;
+        }
+
+        $scope.display = function(data){
+          var info = angular.copy(data.info);
+
+          var metadata = {};
+          angular.forEach(info, function(value, key) {
+            var parts = key.split(".");
+            if (parts[0] == "info"){
+
+              if (parts.length != 2){
+                this[key] = value;
+              }
+              else{
+                var group_name = parts[1].split(":");
+                if (group_name.length == 2){
+                  if (!(group_name[0] in this))
+                    this[group_name[0]] = {};
+
+                  this[group_name[0]][group_name[1]] = value;
+                }
+              }
+            };
+          }, metadata);
+
+          info["metadata"] = "<pre>" + JSON.stringify(metadata, "", 4) + "</pre>"
+
+          var trace_data = "<div class='row'>"
+          columns = ["name", "project", "service", "host", "started",
+                     "finished", "host", "metadata"];
+          for (var i = 0; i < columns.length; i++){
+            trace_data += "<div class='col-md-2 text-right text-capitalize'><strong>" + columns[i] + " </strong></div>";
+            trace_data += "<div class='col-md-10 text-left'>" + info[columns[i]] + "</div>";
+          }
+          trace_data += "</div>";
+
+          var output = (
+            '<div class="modal-header"> Trace Point Details </div>' +
+            '<div class="modal-body">' + trace_data + '</div>' +
+            '<div class="modal-footer"> <span class="glyphicon glyphicon-cloud </div>'
+          )
+
+
+          var modal_instance = $modal.open({
+            "template": output,
+            "size": "lg"
+          });
+        }
+
+        $scope.tree = [convert_input(OSProfilerData)];
+
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div ng-controller="ProfilerCtlr">
+      <table>
+
+      </table>
+      <table class="trace">
+        <tr class="bold text-left" style="border-bottom: solid 1px gray">
+          <td class="level">Levels</td>
+          <td>Duration</td>
+          <td class="text-right">Type</td>
+          <td>Project</td>
+          <td>Service</td>
+          <td>Host</td>
+          <td class="details">Details</td>
+        </tr>
+      </table>
+      <div ng-repeat="data in tree" ng-include="'tree_item_renderer.html'"></div>
+    </div>
+
+  </body>
+
+</html>
