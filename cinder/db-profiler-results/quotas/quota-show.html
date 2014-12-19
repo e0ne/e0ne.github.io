@@ -1,0 +1,209 @@
+<!doctype html>
+<html ng-app="Application">
+
+  <head>
+    <script>
+        var OSProfilerData = {"info": {"started": 0, "finished": 145, "name": "total"}, "children": [{"info": {"name": "wsgi", "service": "osapi_volume", "info.request:host_url": "http://192.168.122.22:8776", "info.request:scheme": "http", "finished": 145, "project": "cinder", "started": 0, "host": "0.0.0.0", "info.request:method": "GET", "info.request:query": "usage=False", "info.request:path": "/v2/9770684810ae42128fc72a0ca7cc0587/os-quota-sets/7f4743821fd44cf8afd7f79da02e8763"}, "parent_id": "0c805722-fd69-4678-a918-c1b566ef20ff", "trace_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "children": [{"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 86, "project": "cinder", "started": 77, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "b7cc74f5-4d18-46db-b3d3-d178aca54283", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT volume_types.created_at AS volume_types_created_at, volume_types.updated_at AS volume_types_updated_at, volume_types.deleted_at AS volume_types_deleted_at, volume_types.deleted AS volume_types_deleted, volume_types.id AS volume_types_id, volume_types.name AS volume_types_name, volume_types.description AS volume_types_description, volume_types.qos_specs_id AS volume_types_qos_specs_id, volume_types.is_public AS volume_types_is_public, volume_type_extra_specs_1.created_at AS volume_type_extra_specs_1_created_at, volume_type_extra_specs_1.updated_at AS volume_type_extra_specs_1_updated_at, volume_type_extra_specs_1.deleted_at AS volume_type_extra_specs_1_deleted_at, volume_type_extra_specs_1.deleted AS volume_type_extra_specs_1_deleted, volume_type_extra_specs_1.id AS volume_type_extra_specs_1_id, volume_type_extra_specs_1.`key` AS volume_type_extra_specs_1_key, volume_type_extra_specs_1.value AS volume_type_extra_specs_1_value, volume_type_extra_specs_1.volume_type_id AS volume_type_extra_specs_1_volume_type_id \nFROM volume_types LEFT OUTER JOIN volume_type_extra_specs AS volume_type_extra_specs_1 ON volume_type_extra_specs_1.volume_type_id = volume_types.id AND volume_type_extra_specs_1.deleted = 0 \nWHERE volume_types.deleted = 0 ORDER BY name", "finished": 95, "project": "cinder", "started": 89, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "129796c6-f7d3-470e-8443-58c12a09ccb1", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 102, "project": "cinder", "started": 98, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "f826aa19-eaf0-4ed7-b197-7c605ba0b3ad", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT quotas.created_at AS quotas_created_at, quotas.updated_at AS quotas_updated_at, quotas.deleted_at AS quotas_deleted_at, quotas.deleted AS quotas_deleted, quotas.id AS quotas_id, quotas.project_id AS quotas_project_id, quotas.resource AS quotas_resource, quotas.hard_limit AS quotas_hard_limit \nFROM quotas \nWHERE quotas.deleted = 0 AND quotas.project_id = %s", "finished": 109, "project": "cinder", "started": 106, "host": "0.0.0.0", "info.db:params": "['7f4743821fd44cf8afd7f79da02e8763']"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "1bf0a408-56dc-4d3b-8c2f-4ed07a4036de", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT 1", "finished": 127, "project": "cinder", "started": 123, "host": "0.0.0.0", "info.db:params": "[]"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "1e731096-dd98-40ef-9566-a597e5f5ebef", "children": []}, {"info": {"name": "db", "service": "osapi_volume", "info.db:statement": "SELECT quota_classes.created_at AS quota_classes_created_at, quota_classes.updated_at AS quota_classes_updated_at, quota_classes.deleted_at AS quota_classes_deleted_at, quota_classes.deleted AS quota_classes_deleted, quota_classes.id AS quota_classes_id, quota_classes.class_name AS quota_classes_class_name, quota_classes.resource AS quota_classes_resource, quota_classes.hard_limit AS quota_classes_hard_limit \nFROM quota_classes \nWHERE quota_classes.deleted = 0 AND quota_classes.class_name = %s", "finished": 138, "project": "cinder", "started": 132, "host": "0.0.0.0", "info.db:params": "['default']"}, "parent_id": "3afb2d3a-8226-4d6e-86d3-729e7613a0f2", "trace_id": "6f7b71a0-3fbf-41f6-a835-b6133993f09a", "children": []}]}]}
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+
+    <style>
+
+      .trace {
+        min-width: 900px;
+        width: 100%;
+      }
+
+      .trace tr.active-true {
+        background-color: #D9EDF7!important;
+      }
+
+      .trace tr td {
+        width: 14%;
+        white-space: nowrap;
+        padding: 2px;
+        border-right: 1px solid #eee;
+
+      }
+      .trace tr td.details {
+        width: 10%;
+        padding-right: 20px;
+      }
+      .trace.cursor_pointer_on_hover {
+        cursor: pointer;
+      }
+      .trace .level {
+        width: 10%;
+        font-weight: bold;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .duration {
+        width: 25px;
+        margin: 0px;
+        padding: 0px;
+        background-color: #c6eff3;
+        border-radius: 4px;
+        font-size: 10px;
+
+      }
+
+      .duration div{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;
+      }
+    </style>
+
+    <script type="text/ng-template"  id="tree_item_renderer.html">
+
+        <div ng-init="hide_children=false">
+          <table class="trace cursor_pointer_on_hover">
+            <tr class="active-{{hover}}" ng-init="hover=false" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
+              <td class="level" style="padding-left:{{data.level * 5}}px;">
+                <button type="button" class="btn btn-default btn-xs" ng-disabled="data.is_leaf" ng-click="hide_children=!hide_children">
+                  <span class="glyphicon glyphicon-{{ (data.is_leaf) ? 'cloud' : ((hide_children) ? 'plus': 'minus')}}"></span>
+                  {{data.level || 0}}
+                </button>
+              </td>
+              <td ng-click="display(data);" class="text-center">
+               <div class="duration" style="width: {{get_width(data)}}%; margin-left: {{get_started(data)}}%">
+                  <div>{{data.info.finished - data.info.started}} ms</div>
+                </div>
+              </td>
+              <td ng-click="display(data);" class="{{ is_important(data) ? 'bold' : ''}} text-right" > {{data.info.name}} </td>
+              <td ng-click="display(data);"> {{data.info.project  || "n/a"}}</td>
+              <td ng-click="display(data);"> {{data.info.service  || "n/a" }} </td>
+              <td ng-click="display(data);"> {{data.info.host || "n/a"}} </td>
+              <td class="details">
+                <a href="#" ng-click="display(data);"> Details </a>
+              </td>
+            </tr>
+          </table>
+
+
+        <div ng-hide="hide_children">
+          <div ng-repeat="data in data.children" ng-include="'tree_item_renderer.html'"> </div>
+        </div>
+      </div>
+
+
+    </script>
+
+    <script>
+      angular.module("Application", ['ui.bootstrap']);
+
+      function ProfilerCtlr($scope, $modal) {
+
+        var convert_input = function(input, level){
+          level = (level) ? level : 0;
+          input.level = level;
+          input.is_leaf = !input.children.length
+
+          for (var i=0; i < input.children.length; i++)
+            convert_input(input.children[i], level + 1);
+          return input;
+        }
+
+        $scope.get_width = function(data){
+
+          var full_duration = $scope.tree[0].info.finished;
+          var duration = (data.info.finished - data.info.started) * 100.0 / full_duration;
+          return (duration >= 0.5) ? duration : 0.5;
+        }
+
+        $scope.get_started = function(data) {
+          var full_duration = $scope.tree[0].info.finished;
+          return data.info.started * 100.0 / full_duration;
+        }
+
+        $scope.is_important = function(data) {
+          return ["total", "wsgi", "rpc"].indexOf(data.info.name) != -1;
+        }
+
+        $scope.display = function(data){
+          var info = angular.copy(data.info);
+
+          var metadata = {};
+          angular.forEach(info, function(value, key) {
+            var parts = key.split(".");
+            if (parts[0] == "info"){
+
+              if (parts.length != 2){
+                this[key] = value;
+              }
+              else{
+                var group_name = parts[1].split(":");
+                if (group_name.length == 2){
+                  if (!(group_name[0] in this))
+                    this[group_name[0]] = {};
+
+                  this[group_name[0]][group_name[1]] = value;
+                }
+              }
+            };
+          }, metadata);
+
+          info["metadata"] = "<pre>" + JSON.stringify(metadata, "", 4) + "</pre>"
+
+          var trace_data = "<div class='row'>"
+          columns = ["name", "project", "service", "host", "started",
+                     "finished", "host", "metadata"];
+          for (var i = 0; i < columns.length; i++){
+            trace_data += "<div class='col-md-2 text-right text-capitalize'><strong>" + columns[i] + " </strong></div>";
+            trace_data += "<div class='col-md-10 text-left'>" + info[columns[i]] + "</div>";
+          }
+          trace_data += "</div>";
+
+          var output = (
+            '<div class="modal-header"> Trace Point Details </div>' +
+            '<div class="modal-body">' + trace_data + '</div>' +
+            '<div class="modal-footer"> <span class="glyphicon glyphicon-cloud </div>'
+          )
+
+
+          var modal_instance = $modal.open({
+            "template": output,
+            "size": "lg"
+          });
+        }
+
+        $scope.tree = [convert_input(OSProfilerData)];
+
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div ng-controller="ProfilerCtlr">
+      <table>
+
+      </table>
+      <table class="trace">
+        <tr class="bold text-left" style="border-bottom: solid 1px gray">
+          <td class="level">Levels</td>
+          <td>Duration</td>
+          <td class="text-right">Type</td>
+          <td>Project</td>
+          <td>Service</td>
+          <td>Host</td>
+          <td class="details">Details</td>
+        </tr>
+      </table>
+      <div ng-repeat="data in tree" ng-include="'tree_item_renderer.html'"></div>
+    </div>
+
+  </body>
+
+</html>
